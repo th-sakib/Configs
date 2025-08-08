@@ -1,3 +1,5 @@
+require('config.lazy')
+
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space>x", "<cmd>.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
@@ -10,3 +12,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 		vim.highlight.on_yank()
 	end
 })
+
