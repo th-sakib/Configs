@@ -3,7 +3,11 @@ require('config.lazy')
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space>x", "<cmd>.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
+
+-- options
 vim.opt.shiftwidth = 2
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- Highlight when yanking text
 vim.api.nvim_create_autocmd('TextYankPost', {
