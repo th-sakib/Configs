@@ -18,3 +18,11 @@ vim.opt.scrolloff = 999 -- keep the cursor at the middle as long as its not the 
 -- This is used for making the "visual block" mode 
 -- in virtual space, basically we can use "v.b. mode" beyond the end of lines. 
 vim.opt.virtualedit = "block"
+
+-- This will use extra tab and split the window 
+-- to show changes in of commands like ":s" substitute
+vim.opt.inccommand = "split" -- options "split", "nosplit", "" - empty to make the feature disable.
+
+vim.opt.ignorecase = true
+vim.opt.termguicolors = true
+
