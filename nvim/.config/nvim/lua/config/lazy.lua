@@ -30,16 +30,16 @@ require("lazy").setup({
       --priority = 1000,
       --opts = {},
       --config = function ()
-      --        -- vim.cmd.colorscheme("tokyonight-storm")
-      --        vim.cmd.colorscheme("tokyonight-moon")
-      --end
+	--        -- vim.cmd.colorscheme("tokyonight-storm")
+	--        vim.cmd.colorscheme("tokyonight-moon")
+	--end
+      },
+      --import your plugins
+      { import = "config.plugins" }
     },
-    --import your plugins
-    { import = "config.plugins" }
-  },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  -- install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true, notify = false },
-})
+    -- Configure any other settings here. See the documentation for more details.
+    -- colorscheme that will be used when installing plugins.
+    -- install = { colorscheme = { "habamax" } },
+    -- automatically check for plugin updates
+    checker = { enabled = true, notify = false },
+  })
