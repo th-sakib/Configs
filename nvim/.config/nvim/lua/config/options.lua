@@ -26,3 +26,8 @@ vim.opt.inccommand = "split" -- options "split", "nosplit", "" - empty to make t
 vim.opt.ignorecase = true
 vim.opt.termguicolors = true
 
+-- Setup Diagnostics -- 
+vim.diagnostic.config({
+  virtual_text = true,
+  virtual_lines = false
+})
