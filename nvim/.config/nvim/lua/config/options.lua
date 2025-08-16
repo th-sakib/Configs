@@ -13,7 +13,7 @@ vim.opt.shiftwidth = 2
 -- with Neovim's registers.
 -- vim.opt.clipboard = "unnamedplus"
 
-vim.opt.scrolloff = 999 -- keep the cursor at the middle as long as its not the start/end of the file 
+-- vim.opt.scrolloff = 999 -- keep the cursor at the middle as long as its not the start/end of the file 
 
 -- This is used for making the "visual block" mode 
 -- in virtual space, basically we can use "v.b. mode" beyond the end of lines. 
