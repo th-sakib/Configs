@@ -23,19 +23,29 @@ return {
       sources = {
 	default = { 'lazydev','lsp', 'path', 'snippets', 'buffer' },
 	providers = {
+	  lsp = {
+	    name = "LSP",
+	    score_offset = 100, -- prefer LSP completions
+	  },
 	  lazydev = {
 	    name = "LazyDev",
 	    module = "lazydev.integrations.blink",
 	    -- make lazydev completions top priority (see `:h blink.cmp`)
 	    score_offset = 100,
 	  },
+	  snippets = {
+	    score_offset = 50, -- above buffer but only in lua/markdown
+	  },
+	  buffer = {
+	    score_offset = 10, -- low priority
+	  },
 	},
-
       },
 
-      -- lua implementation instead by using `implementation = "lua" 
-      fuzzy = { implementation = "prefer_rust_with_warning" }
     },
-    opts_extend = { "sources.default" }
-  }
+
+    -- lua implementation instead by using `implementation = "lua" 
+    fuzzy = { implementation = "prefer_rust_with_warning" },
+  opts_extend = { "sources.default" }
+  },
 }
