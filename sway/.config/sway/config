@@ -21,6 +21,11 @@ default_border none
 # To remove the title bar and all borders for floating windows
 default_floating_border none
 
+input "2522:34614:SIGMACHIP_USB_Mouse" {
+    accel_profile "flat"
+    pointer_accel -0.1
+}
+
 # ============= end of my configuration ===============
 # ========= Default config for sway ============
 
