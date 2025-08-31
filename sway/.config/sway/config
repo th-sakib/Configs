@@ -205,7 +205,6 @@ exec swayidle -w \
     bindsym $mod+minus scratchpad show
 #
 # Resizing containers:
-#
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
