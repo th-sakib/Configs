@@ -1,6 +1,6 @@
 print("meaw")
-require('config.lazy')
 require('config.options')
+require('config.lazy')
 require('config.keymaps')
 
 -- Highlight when yanking text
