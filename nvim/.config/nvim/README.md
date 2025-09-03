@@ -13,15 +13,26 @@ Contain all the neccessary plugins.
 `colorscheme.lua`:
 - this is where set my color scheme I set tokyonight theme in my case.
 
-blink.lua
-lazydev.lua
-lsp.lua
-lualine.lua
-mason-lspconfig.lua
-mason.lua
-oil.lua
-sleuth-vim.lua
-treesitter.lua
-vim-tmux-navigator.lua
+`fzflua.lua`:
+- This plugin is used to fuzzy find files.
+- useful keymaps are:
+    * `<leader>ff` - to start searching for files inside opened project directory.
+    * `<leader>fg` - to find files with **live-grep**, Which actually allows us to find all occurrence of a keyword or expression.
+    * `Check nvim/lua/plugins/fzflua.lua`: here all the keybindings are set
+- We can actually pass argument on require('fzf-lua').files({cwd=vim.fn.stdpath("config")}) where we can specify which directory we want to fuzzy find.
+    * In this case though we are passing the nvim config directory.
+`project.nvim`: 
+- This actually help `fzflua` to look at the root of the project directory so we can fuzzy find files from the root.
+    * It detect root directory by searching for .git, package.json and so on
 
+󰢱  blink.lua
+󰢱  lazydev.lua
+󰢱  lsp.lua
+󰢱  lualine.lua
+󰢱  mason-lspconfig.lua
+󰢱  mason.lua
+󰢱  oil.lua
+󰢱  sleuth-vim.lua
+󰢱  treesitter.lua
+󰢱  vim-tmux-navigator.lua
 

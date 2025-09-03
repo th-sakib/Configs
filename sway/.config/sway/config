@@ -21,6 +21,7 @@ default_border none
 # To remove the title bar and all borders for floating windows
 default_floating_border none
 
+# Change mouse sensitivity and acceleration mode
 input "2522:34614:SIGMACHIP_USB_Mouse" {
     accel_profile "flat"
     pointer_accel -0.1
@@ -66,7 +67,7 @@ output * bg /usr/share/backgrounds/sway/aesthetic_desktop.png fill
 
 ### Idle configuration
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 400 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * dpms off"' \
              resume 'swaymsg "output * dpms on"' \
          \
