@@ -1,0 +1,29 @@
+return {
+--   "neovim/nvim-lspconfig",
+--   dependencies = {
+--     "mason-org/mason.nvim",
+--     "mason-org/mason-lspconfig.nvim",
+--     "WhoIsSethDaniel/mason-tool-installer.nvim",
+--     { "j-hui/fidget.nvim", opts = {} }, -- LSP status
+--     'saghen/blink.cmp',
+--   },
+--   config = function()
+--     local lspconfig = require('lspconfig')
+-- 
+--     -- List of servers with optional settings
+--     local servers = {
+--       lua_ls = {
+--         settings = {
+--           Lua = {
+--             completion = { callSnippet = "Replace" },
+--           },
+--         },
+--       },
+--       tsserver = {},
+--     }
+--     -- Lua LSP
+--     lspconfig.lua_ls.setup{}
+--     -- TypeScript / JavaScript LSP
+--     lspconfig.ts_ls.setup{}
+--   end
+}

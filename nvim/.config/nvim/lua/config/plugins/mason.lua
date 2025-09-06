@@ -1,4 +1,27 @@
 return {
-  "mason-org/mason.nvim",
-  opts = {}
+--   -- Mason
+--   {
+--     "mason-org/mason.nvim",
+--     opts = {}
+--   },
+--   -- Mason-lspconfig
+--   {
+--     "mason-org/mason-lspconfig.nvim",
+--     opts = {
+--       ensure_installed = { "lua_ls", "ts_ls" },
+--     },
+--     dependencies = {
+--       { "mason-org/mason.nvim", opts = {} },
+--       "neovim/nvim-lspconfig",
+--     },
+--   },
+--   -- Mason-tool-installer
+--   {
+--     "WhoIsSethDaniel/mason-tool-installer.nvim",
+--     dependencies = { "mason-org/mason.nvim" },
+--     opts = {
+--       ensure_installed = {},
+--     },
+--     run_on_start = true,
+--   }
 }
