@@ -26,13 +26,13 @@ vim.opt.showmode = false -- disable the modes showing message in the bottom of t
 -- with Neovim's registers.
 -- vim.opt.clipboard = "unnamedplus"
 
-vim.opt.scrolloff = 10 -- if 999 value then, keep the cursor at the middle as long as its not the start/end of the file 
+vim.opt.scrolloff = 10 -- if 999 value then, keep the cursor at the middle as long as its not the start/end of the file
 
--- This is used for making the "visual block" mode 
--- in virtual space, basically we can use "v.b. mode" beyond the end of lines. 
+-- This is used for making the "visual block" mode
+-- in virtual space, basically we can use "v.b. mode" beyond the end of lines.
 vim.opt.virtualedit = "block"
 
--- This will use extra tab and split the window 
+-- This will use extra tab and split the window
 -- to show changes in of commands like ":s" substitute
 vim.opt.inccommand = "split" -- options "split", "nosplit", "" - empty to make the feature disable.
 
@@ -45,10 +45,10 @@ vim.opt.termguicolors = true
 vim.opt.list = true
 
 -- set listchars=tab:»·,trail:·,extends:>,precedes:<,nbsp:␣
-vim.opt.listchars = {tab = "» ", trail = "·", nbsp = "␣"}
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
--- Setup Diagnostics -- 
+-- Setup Diagnostics --
 vim.diagnostic.config({
   virtual_text = true,
-  virtual_lines = false
+  virtual_lines = false,
 })

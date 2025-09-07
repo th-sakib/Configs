@@ -5,6 +5,11 @@ vim.keymap.set("v", "<space>x", ":lua<CR>")
 
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
+-- formate code
+vim.keymap.set("n", "gf", function()
+	require("conform").format()
+end, { desc = "Open parent directory" })
+
 -- Navigation
 -- The navigation are set in the tmux-vim-navigation plugin
 --vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')

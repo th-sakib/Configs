@@ -122,3 +122,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # for safety
 alias rm="rm -i"
+alias v="nvim"
