@@ -10,6 +10,8 @@ vim.keymap.set("n", "gf", function()
 	require("conform").format()
 end, { desc = "Open parent directory" })
 
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
+
 -- Navigation
 -- The navigation are set in the tmux-vim-navigation plugin
 --vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')

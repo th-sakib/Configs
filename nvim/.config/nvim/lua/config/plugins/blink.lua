@@ -18,6 +18,7 @@ return {
     },
 
     completion = { documentation = { auto_show = true } },
+    signature = {enabled=true}, -- shows the function parameter position while invoking it
 
     sources = {
       default = { "lazydev", "lsp", "path", "snippets", "buffer" },
