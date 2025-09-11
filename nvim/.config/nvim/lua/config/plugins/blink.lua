@@ -18,28 +18,10 @@ return {
     },
 
     completion = { documentation = { auto_show = true } },
-    signature = {enabled=true}, -- shows the function parameter position while invoking it
+    signature = { enabled = true }, -- shows the function parameter position while invoking it
 
     sources = {
-      default = { "lazydev", "lsp", "path", "snippets", "buffer" },
-      providers = {
-        lsp = {
-          name = "LSP",
-          score_offset = 100, -- prefer LSP completions
-        },
-        lazydev = {
-          name = "LazyDev",
-          module = "lazydev.integrations.blink",
-          -- make lazydev completions top priority (see `:h blink.cmp`)
-          score_offset = 100,
-        },
-        snippets = {
-          score_offset = 50, -- above buffer but only in lua/markdown
-        },
-        buffer = {
-          score_offset = 10, -- low priority
-        },
-      },
+      default = { "lsp", "path", "snippets", "buffer" },
     },
   },
 
