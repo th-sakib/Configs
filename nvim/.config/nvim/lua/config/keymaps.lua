@@ -7,7 +7,7 @@ vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory
 
 -- formate code
 vim.keymap.set("n", "gf", function()
-	require("conform").format()
+  require("conform").format()
 end, { desc = "Open parent directory" })
 
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
