@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -72,7 +72,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 
 # source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
@@ -122,4 +122,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # for safety
 alias rm="rm -i"
-alias v="nvim"
+alias n="nvim"
