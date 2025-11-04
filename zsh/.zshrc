@@ -120,6 +120,16 @@ export NVM_DIR="$HOME/.nvm"
 # This line loads fzf's keybindings and autocompletion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# FNM (Fast Node Manager)
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --use-on-cd)"
+fi
+
 # for safety
 alias rm="rm -i"
 alias n="nvim"
+alias gc="git commit"
+alias gs="git status"
+alias ..="cd .."

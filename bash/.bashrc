@@ -25,3 +25,27 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 eval "$(starship init bash)"
+
+# fnm - fast node manager
+export PATH="$HOME/.fnm:$PATH"
+eval "$(fnm env)"
+
+# aliases
+alias gc="git commit"
+alias gs="git status"
+alias n="nvim"
+echo "bash"
+
+# fnm
+FNM_PATH="/home/incognith/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+# fnm
+FNM_PATH="/home/incognith/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
