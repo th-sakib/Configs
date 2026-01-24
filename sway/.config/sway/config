@@ -7,6 +7,10 @@ exec_always nm-applet --indicator
 exec_always blueman-applet
 exec_always mako
 
+# --- Keyring (safe) ---
+exec_always gnome-keyring-daemon --start --components=secrets
+exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 # --- Quality of life ---
 # Clipboard (wl-copy / wl-paste already installed with wl-clipboard)
 # Screenshots:
@@ -57,7 +61,7 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/aesthetic_desktop.png fill
+# output * bg /usr/share/backgrounds/sway/aesthetic_desktop.png fill
 #
 # Example configuration:
 #
@@ -91,7 +95,7 @@ exec swayidle -w \
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-### Key bindings
+### key bindings
 #
 # Basics:
 #

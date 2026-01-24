@@ -30,22 +30,34 @@ eval "$(starship init bash)"
 export PATH="$HOME/.fnm:$PATH"
 eval "$(fnm env)"
 
-# aliases
+# fnm
+FNM_PATH="/home/incognith/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+# fnm
+FNM_PATH="/home/incognith/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+# ==== ==== ==== ====
+# ==== aliases ======
+# ==== ==== ==== ====
+# git aliases
 alias gc="git commit"
 alias gs="git status"
 alias n="nvim"
+
+# neovim aliases
+alias nm='NVIM_APPNAME=nvim-main nvim'
+alias n='NVIM_APPNAME=nvim-lazy nvim'
+
+alias ff="fastfetch"
+alias stop-waydroid='waydroid session stop && sudo waydroid container stop'
+
 echo "bash"
 
-# fnm
-FNM_PATH="/home/incognith/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
-
-# fnm
-FNM_PATH="/home/incognith/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
