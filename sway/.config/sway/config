@@ -1,15 +1,26 @@
 # The default super key (window key)
 set $mod Mod4
 
+# color variables
+# Cyberpunk Green Theme Colors
+set $dark_bg    #0d0f14
+set $neon_green #39ff14
+set $teal_green #00f5d4
+set $deep_forest #1a2f2a
+set $white      #ffffff
+
+# Cyber-Noir Blue Theme
+set $deep_black   #050505
+set $electric_blue #00ffff
+set $neon_blue     #0077ff
+set $muted_blue    #003366
+set $white         #ffffff
+
 # --- Launch bar, applets, and notifications on login ---
 exec_always waybar
 exec_always nm-applet --indicator
 exec_always blueman-applet
 exec_always mako
-
-# --- Keyring (safe) ---
-exec_always gnome-keyring-daemon --start --components=secrets
-exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 # --- Quality of life ---
 # Clipboard (wl-copy / wl-paste already installed with wl-clipboard)
@@ -19,16 +30,36 @@ bindsym Shift+Print exec slurp | grim -g - ~/Pictures/screenshot-$(date +%F_%T).
 
 bindsym $mod+Shift+r exec pkill waybar && swaymsg reload
 
-# To remove the title bar and all borders for tiled windows
-default_border none
+# =======   Look and feel   ======
+# default_border none
+default_border pixel 2
 
-# To remove the title bar and all borders for floating windows
-default_floating_border none
+# Layout Settings
+default_border pixel 2
+gaps inner 4
+gaps outer 0
+smart_borders on
+
+# GREEN
+# class                 border        backgr.       text    indicator    child_border
+# client.focused          $neon_green   $deep_forest  $white  $teal_green  $neon_green
+# client.focused_inactive $deep_forest  $dark_bg      #888888 $deep_forest $deep_forest
+# client.unfocused        #111111       $dark_bg      #444444 #111111      #111111
+
+# BLUE
+# class                 border        backgr.       text    indicator    child_border
+client.focused          $electric_blue $muted_blue   $white  $neon_blue   $electric_blue
+client.focused_inactive $muted_blue    $deep_black   #666666 $muted_blue  $muted_blue
+client.unfocused        #111111        $deep_black   #444444 #111111      #111111
+
+
+# default_floating_border none
+default_floating_border pixel 2
 
 # Change mouse sensitivity and acceleration mode
 input "2522:34614:SIGMACHIP_USB_Mouse" {
     accel_profile "flat"
-    pointer_accel -0.1
+    pointer_accel -0.5
 }
 
 # ============= end of my configuration ===============
@@ -61,11 +92,12 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg /usr/share/backgrounds/sway/aesthetic_desktop.png fill
+output * bg ./astronaut fill
 #
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+# output HDMI-A-1 resolution 1920x1080 position 1920,0
+output HDMI-A-1 resolution 1440x900 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
